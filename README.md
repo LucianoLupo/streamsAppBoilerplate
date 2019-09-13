@@ -6,7 +6,8 @@ Uses a "mock Api" with json-server
 
 in order this to work, you can init an npm project replace the entire package.json with this:
 
-```{
+```
+{
   "name": "api",
   "version": "1.0.0",
   "description": "",
@@ -19,6 +20,7 @@ in order this to work, you can init an npm project replace the entire package.js
   "dependencies": {
     "json-server": "^0.15.1"
   }
-} ```
+}
+```
 
 and then installed it!
