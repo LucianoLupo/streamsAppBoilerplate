@@ -1,7 +1,7 @@
 import React from 'react';
-import { BrowserRouter as Router , Route } from 'react-router-dom';
+import { Router , Route, Switch} from 'react-router-dom';
 import './App.css';
-
+import history from './history';
 import StreamEdit from './components/StreamEdit';
 import StreamCreate from './components/StreamCreate';
 import StreamDelete from './components/StreamDelete';
@@ -15,14 +15,17 @@ function App() {
   return (
     <div className="ui container">
       
-      <Router>
-      <StreamNavbar/>
+      <Router history={history}>
         <div>
-          <Route path="/streams/edit" exact component={StreamEdit} />
-          <Route path="/streams/new" exact component={StreamCreate} />
-          <Route path="/streams/delete" exact component={StreamDelete} />
+        <StreamNavbar/>
+        <Switch>
           <Route path="/" exact component={StreamList} />
-          <Route path="/streams/show" exact component={StreamShow} />
+          <Route path="/streams/edit/:id" exact component={StreamEdit} />
+          <Route path="/streams/new" exact component={StreamCreate} />
+          <Route path="/streams/delete/:id" exact component={StreamDelete} />
+          <Route path="/streams/:id" exact component={StreamShow} />
+        </Switch>
+
         </div>
       </Router>
       
