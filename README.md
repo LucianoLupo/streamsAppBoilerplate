@@ -27,3 +27,9 @@ and then installed it!
 
 
 ![](demoImages/1.PNG)
+![](demoImages/2.PNG)
+![](demoImages/3.PNG)
+![](demoImages/4.PNG)
+![](demoImages/5.PNG)
+![](demoImages/6.PNG)
+![](demoImages/7.PNG)
